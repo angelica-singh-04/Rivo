@@ -2,6 +2,7 @@ import { SidebarDemo } from "@/components/ui/SidebarDemo";
 import { HeroSection } from "@/components/ui/Herosection";
 import {About} from "@/components/ui/About";
 import CreationSection from "./components/ui/Creationsection";
+import ProcessSection from "./components/ui/ProcessSection";
 export default function App() {
   return (
     <div className="flex h-screen bg-gray-50">
@@ -15,6 +16,7 @@ export default function App() {
         <HeroSection />
         <About />
         <CreationSection />
+        <ProcessSection />
       </div>
 
     </div>
