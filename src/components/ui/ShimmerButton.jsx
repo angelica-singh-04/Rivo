@@ -1,0 +1,77 @@
+import React from "react";
+import { clsx } from "clsx";
+
+const VARIANT_CLASSES = {
+  primary:
+    "bg-black hover:bg-orange-600 text-white border-transparent focus:ring-2 focus:ring-indigo-500",
+  secondary:
+    "bg-white hover:bg-gray-50 text-gray-900 border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-300",
+  ghost:
+    "bg-transparent hover:bg-gray-100 text-gray-800 border-transparent focus:ring-2 focus:ring-gray-200",
+  outline:
+    "text-neutral-900 bg-white border border-neutral-400 hover:bg-orange-50 focus:ring-2 focus:ring-indigo-500",
+};
+
+const SIZE_CLASSES = {
+  sm: "px-4 py-3 text-sm rounded-sm",
+  md: "px-5 py-3 text-sm rounded-sm",
+  lg: "px-6 py-3 text-base rounded-sm",
+};
+
+const Button = React.forwardRef(
+  (
+    {
+      variant = "primary",
+      size = "md",
+      loading = false,
+      disabled = false,
+      className,
+      type = "button",
+      onClick,
+      children,
+      icon: Icon, // Pass React component for icon
+      iconPosition = "left", // left or right
+      ...rest
+    },
+    ref
+  ) => {
+    const isDisabled = disabled || loading;
+
+    const base =
+      "inline-flex items-center justify-center gap-2 font-semibold border transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group";
+
+    const classes = clsx(
+      base,
+      VARIANT_CLASSES[variant] || VARIANT_CLASSES.primary,
+      SIZE_CLASSES[size] || SIZE_CLASSES.md,
+      className
+    );
+
+    return (
+      <button
+        type={type}
+        ref={ref}
+        className={classes}
+        onClick={isDisabled ? undefined : onClick}
+        disabled={isDisabled}
+        aria-busy={loading || undefined}
+        {...rest}
+      >
+        {/* Left icon */}
+        {Icon && iconPosition === "left" && (
+          <Icon className="w-4 h-4" aria-hidden="true" />
+        )}
+
+        {/* Button text */}
+        <span>{children}</span>
+
+        {/* Right icon */}
+        {Icon && iconPosition === "right" && (
+          <Icon className="w-4 h-4" aria-hidden="true" />
+        )}
+      </button>
+    );
+  }
+);
+
+export default Button;

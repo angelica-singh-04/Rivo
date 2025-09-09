@@ -8,7 +8,7 @@ const SlidingCarousel = ({ slides }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [length]);
 
@@ -52,7 +52,7 @@ const SlidingCarousel = ({ slides }) => {
               margin: "0 5px",
               display: "inline-block",
               borderRadius: "50%",
-              backgroundColor: current === index ? "#333" : "#bbb",
+              backgroundColor: current === index ? "#ff7e0cff" : "#e4e4e4ff",
               cursor: "pointer",
               transition: "background-color 0.3s",
             }}

@@ -27,7 +27,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="px-6 py-16 bg-gray-50">
+    <section className="px-6 py-5 bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
         <div className="flex items-start w-[30%]">
           <h2 className="text-[3.5rem] font-bold leading-[1.1]">HOW RIVO WORKS?</h2>

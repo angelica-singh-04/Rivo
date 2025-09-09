@@ -3,7 +3,7 @@ import features from "../../assets/features.png";
 
 export default function FeatureMasonry() {
   return (
-    <section className="dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 py-16 px-6">
+    <section className="dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 py-6 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-[3.5rem] font-bold w-[80%] leading-[1.1] py-10">
           CORE FEATURES OF RIVO.COM

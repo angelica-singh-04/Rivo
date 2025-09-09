@@ -21,9 +21,6 @@ const invoices = [
     { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
       { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
         { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
-          { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
-            { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
-              { id: "#1284", pname: "Refactor Auth Middleware", score: "High Risk", lines: "420", status: "Needs Review" , files:"4" },
 
 ];
 

@@ -5,7 +5,7 @@ export const About = () => {
     
   return (
 
-            <div className="flex justify-center gap-3 mt-20">
+            <div className="flex justify-center gap-3 mt-8">
         <div className="border border-gray-200 w-full max-h-min rounded-lg p-4 overflow-auto p-10 bg-white">
   <div className="grid grid-cols-2 gap-4">
     <p className="text-sm">

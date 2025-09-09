@@ -6,15 +6,23 @@ import ProcessSection from "./components/ui/ProcessSection";
 import { TableDemo } from "./components/ui/TableDemo";
 import SlidingCarousel from "./components/ui/SlidingCarousek";
 import ResultSection from "./components/ui/ResultSection";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { RippleButton } from "@/components/magicui/ripple-button";
+import ShimmerButton from "./components/ui/ShimmerButton";
+import { ArrowRight } from "lucide-react";// import NumberTicker from "./components/ui/NumberTicker";
+import Footer from "./components/ui/Footer";
+import KeyMetrics from "./components/ui/KeyMetrics";
+
+
 
 
 export default function App() {
 
   const slides = [
     "Save over 20+ developer hours every week by letting CodeGuardianAI handle repetitive code reviews.",
-    "Box 2: Latest Updates",
-    "Box 3: Join Us Today",
-    "Box 4: Contact Info",
+    "Catch nearly 90% of common bugs before they ever reach production and impact your users.",
+    "Generate complete unit tests in seconds — boosting project-wide test coverage by up to 25% instantly.",
+    "Risk scoring automatically highlights the top 10% of pull requests that require urgent human review.",
   ];
 
   return (
@@ -24,8 +32,25 @@ export default function App() {
       </div>
       <div className="flex-1 ml-15 overflow-auto p-6">
         <HeroSection />
+      <ShimmerButton icon={ArrowRight} iconPosition="right" variant="primary" className="mt-2">
+        Connect Your Repository
+      </ShimmerButton>
+
+      <ShimmerButton icon={ArrowRight} iconPosition="right" variant="outline" className="ml-2">
+        Learn How It Works
+      </ShimmerButton>
+      <div className="p-5 w-full flex flex-col items-center justify-center bg-gray-50">
+      <KeyMetrics />
+      </div>
+
+
+
         <About />
+
         <CreationSection />
+                    <div>
+      <SlidingCarousel slides={slides} />
+    </div>
         <ProcessSection />
         <div className="width-1/2 py-5">
           <h1 className="text-[3.5rem] font-bold w-[80%] leading-[1.1]">INSIGHTS</h1>
@@ -33,12 +58,11 @@ export default function App() {
         </div>
         <TableDemo />
 
-    <div>
-      <h1 style={{ textAlign: "center" }}>Sliding Box Carousel</h1>
-      <SlidingCarousel slides={slides} />
-    </div>
+
 
     <ResultSection />
+    <Footer />
+
       </div>
 
     </div>

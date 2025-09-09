@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ResultsSection() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center py-16">
     <section className="bg-black w-full text-white py-20 px-6 border rounded-2xl flex items-center justify-center">
       <div className="w-[90%] mx-auto text-center flex flex-col items-center justify-center">
 {/* 
