@@ -5,11 +5,13 @@ import CreationSection from "./components/ui/Creationsection";
 import ProcessSection from "./components/ui/ProcessSection";
 import { TableDemo } from "./components/ui/TableDemo";
 import SlidingCarousel from "./components/ui/SlidingCarousek";
+import ResultSection from "./components/ui/ResultSection";
+
 
 export default function App() {
 
   const slides = [
-    "Box 1: Welcome!",
+    "Save over 20+ developer hours every week by letting CodeGuardianAI handle repetitive code reviews.",
     "Box 2: Latest Updates",
     "Box 3: Join Us Today",
     "Box 4: Contact Info",
@@ -35,6 +37,8 @@ export default function App() {
       <h1 style={{ textAlign: "center" }}>Sliding Box Carousel</h1>
       <SlidingCarousel slides={slides} />
     </div>
+
+    <ResultSection />
       </div>
 
     </div>

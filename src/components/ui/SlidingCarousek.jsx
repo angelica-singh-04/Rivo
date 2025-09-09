@@ -15,7 +15,7 @@ const SlidingCarousel = ({ slides }) => {
   const goToSlide = (index) => setCurrent(index);
 
   return (
-    <div style={{ width: "400px", overflow: "hidden", margin: "50px auto" }}>
+    <div style={{ width: "60%", overflow: "hidden", margin: "50px auto" }}>
       <div
         style={{
           display: "flex",
@@ -29,11 +29,10 @@ const SlidingCarousel = ({ slides }) => {
             style={{
               minWidth: "100%",
               padding: "40px",
-              background: "#f0f0f0",
               textAlign: "center",
               fontSize: "18px",
               borderRadius: "8px",
-              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              fontWeight: "bold"
             }}
           >
             {slide}
