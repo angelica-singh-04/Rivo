@@ -1,38 +1,60 @@
-// src/Apps/Oauth/Oauth.jsx
 import React from "react";
-import Button from "@/components/ui/ShimmerButton";
-import { Github, Gitlab } from "lucide-react"; // icons
+import { FaGithub } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-export default function Oauth() {
-  const handleOAuthLogin = (provider) => {
-    // Replace with your backend OAuth endpoints
-    const oauthUrls = {
-      github: "http://localhost:4000/auth/github", 
-      gitlab: "http://localhost:4000/auth/gitlab",
-    };
+import ShimmerButton from "@/components/ui/ShimmerButton";
 
-    window.location.href = oauthUrls[provider];
-  };
 
+export default function DefineGitHubProduct() {
+      const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">Sign in with OAuth</h1>
-      <div className="space-y-4 w-64">
-        <Button
-          onClick={() => handleOAuthLogin("github")}
-          className="w-full flex items-center justify-center gap-2 bg-black hover:bg-gray-900 text-white rounded-lg py-2 px-4"
-        >
-          <Github className="w-5 h-5" />
-          Connect with GitHub
-        </Button>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-neutral-50 px-4">
+      <div className="w-full max-w-md">
+        {/* Icon */}
+        <div className="mb-4 flex justify-start"> {/* Changed to justify-start */}
+          <div className="bg-gradient-to-br from-orange-400 to-red-400 p-4 rounded-xl shadow-md">
+            <FaGithub className="text-white text-3xl" />
+          </div>
+        </div>
 
-        <Button
-          onClick={() => handleOAuthLogin("gitlab")}
-          className="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg py-2 px-4"
+        {/* Title */}
+        <h1 className="text-2xl font-bold mb-2 text-gray-900 text-left uppercase">
+          Connect your Github
+        </h1>
+
+        {/* Small Description */}
+        <p className="text-gray-600 mb-4 text-left text-sm">
+Securely connect your GitHub account to enable advanced code review and AI-powered suggestions for your projects.        </p>
+
+        {/* Card */}
+        <div className="bg-white rounded-xl border border-b border-neutral-200 shadow-lg w-full p-5 mb-4">
+          {/* Card Header */}
+          <p className="text-xs font-semibold text-orange-500 uppercase mb-2">
+            Define Your GitHub Product
+          </p>
+
+          {/* Card Content */}
+          <h2 className="font-medium text-gray-900 mb-1">Review Pull Requests with AI</h2>
+          <p className="text-xs text-gray-500">
+Gain insights and speed up your workflow. Our AI will analyze your pull requests and suggest changes.          </p>
+        </div>
+
+        {/* Button */}
+        {/* <div className="flex justify-start">
+          <button className="bg-gradient-to-br from-orange-400 to-red-400 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition">
+            Connect
+          </button>
+        </div> */}
+        <ShimmerButton
+          icon={ArrowRight}
+          iconPosition="right"
+          variant="primary"
+          className="mt-2"
+          onClick={() => navigate("/oauth")}
         >
-          <Gitlab className="w-5 h-5" />
-          Connect with GitLab
-        </Button>
+          Connect with Github
+        </ShimmerButton>
       </div>
     </div>
   );
