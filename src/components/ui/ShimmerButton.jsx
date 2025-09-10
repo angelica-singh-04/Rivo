@@ -3,13 +3,13 @@ import { clsx } from "clsx";
 
 const VARIANT_CLASSES = {
   primary:
-    "bg-black hover:bg-orange-600 text-white border-transparent focus:ring-2 focus:ring-indigo-500",
+    "bg-black hover:bg-orange-600 text-white border-transparent",
   secondary:
-    "bg-white hover:bg-gray-50 text-gray-900 border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-300",
+    "bg-white hover:bg-gray-50 text-gray-900 border-gray-200 shadow-sm focus:ring-2 focus:ring-orange-300",
   ghost:
     "bg-transparent hover:bg-gray-100 text-gray-800 border-transparent focus:ring-2 focus:ring-gray-200",
   outline:
-    "text-neutral-900 bg-white border border-neutral-400 hover:bg-orange-50 focus:ring-2 focus:ring-indigo-500",
+    "text-neutral-900 bg-white border border-neutral-400 hover:bg-orange-50 focus:ring-2 focus:ring-orange-500",
 };
 
 const SIZE_CLASSES = {
