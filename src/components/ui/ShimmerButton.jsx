@@ -18,7 +18,7 @@ const SIZE_CLASSES = {
   lg: "px-6 py-3 text-base rounded-sm",
 };
 
-const Button = React.forwardRef(
+const ShimmerButton = React.forwardRef(
   (
     {
       variant = "primary",
@@ -29,22 +29,19 @@ const Button = React.forwardRef(
       type = "button",
       onClick,
       children,
-      icon: Icon, // Pass React component for icon
-      iconPosition = "left", // left or right
+      icon: Icon,
+      iconPosition = "left",
       ...rest
     },
-    ref
+    ref,
   ) => {
     const isDisabled = disabled || loading;
 
-    const base =
-      "inline-flex items-center justify-center gap-2 font-semibold border transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group";
-
     const classes = clsx(
-      base,
+      "inline-flex items-center justify-center gap-2 font-semibold border transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative",
       VARIANT_CLASSES[variant] || VARIANT_CLASSES.primary,
       SIZE_CLASSES[size] || SIZE_CLASSES.md,
-      className
+      className,
     );
 
     return (
@@ -57,21 +54,16 @@ const Button = React.forwardRef(
         aria-busy={loading || undefined}
         {...rest}
       >
-        {/* Left icon */}
-        {Icon && iconPosition === "left" && (
+        {iconPosition === "left" && Icon && (
           <Icon className="w-4 h-4" aria-hidden="true" />
         )}
-
-        {/* Button text */}
-        <span>{children}</span>
-
-        {/* Right icon */}
-        {Icon && iconPosition === "right" && (
+        {children}
+        {iconPosition === "right" && Icon && (
           <Icon className="w-4 h-4" aria-hidden="true" />
         )}
       </button>
     );
-  }
+  },
 );
 
-export default Button;
+export default ShimmerButton;
