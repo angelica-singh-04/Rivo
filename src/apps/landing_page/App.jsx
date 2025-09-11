@@ -36,7 +36,7 @@ export default function App() {
           iconPosition="right"
           variant="primary"
           className="mt-2"
-          onClick={() => navigate("/oauth")}
+          onClick={() => navigate("/Selection_form")}
         >
           Connect Your Repository
         </ShimmerButton>
