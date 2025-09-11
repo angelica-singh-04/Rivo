@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Github, GitPullRequest, Bot, AlertTriangle, CheckCircle } from "lucide-react";
 import logo from "@/assets/logo_transparent.png";
-import ReviewPage from "@/apps/Reviewpage/ReviewPage.jsx";
+import ReviewPage from "@/apps/ReviewPage/ReviewPage.jsx";
 
 export default function WelcomeScreen() {
   const [showOutput, setShowOutput] = useState(false);
