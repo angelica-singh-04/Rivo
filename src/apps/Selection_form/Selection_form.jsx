@@ -107,7 +107,7 @@ export default function WelcomeScreen() {
               iconPosition="right"
               variant="primary"
               className="mt-6"
-              onClick={() => navigate("/selection_form")}
+              onClick={() => navigate("/Branch_Selection")}
             >
               Connect with Github
             </ShimmerButton>
